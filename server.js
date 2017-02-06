@@ -8,6 +8,7 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use('/favorites', favorites);
 
 app.use("/*", index);
 

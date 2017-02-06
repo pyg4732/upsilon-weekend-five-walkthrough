@@ -13,6 +13,7 @@ angular.module("gifApp").service("GiphyService", [
       return $http
         .get(API + "/random", { params: params })
         .then(function(res) {
+          //first data= angular separting data and status code. 2nd data is data coming from giphy api
           return res.data.data;
         })
         .catch(function(err) {

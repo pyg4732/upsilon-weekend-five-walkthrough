@@ -13,10 +13,19 @@ angular.module("gifApp").controller("SearchController", [
     };
 
     this.search = function() {
-      GiphyService.search(this.q).then(function(gifs) {
+      GiphyService.search(vm.q).then(function(gifs) {
+        //.map property iterates through array
         vm.results = gifs.map(function(gif) {
+          //used in line 31 of index.html
           return { url: gif.images.fixed_height.url };
         });
+
+        // another way to iterate thorugh array
+        // for (var i = 0; i < gifs.length; i++) {
+        //   var gif =gifs[i];
+        //   vm.results.push({url: gif.images.fixed_height.url})
+        // }
+
         console.log(vm.results);
       });
     };

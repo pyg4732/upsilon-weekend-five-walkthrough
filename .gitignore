@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 public/vendors
 public/scripts/client.min.js
+npm-debug.log
+.gitignore

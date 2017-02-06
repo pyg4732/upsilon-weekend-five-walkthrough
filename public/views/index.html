@@ -18,9 +18,11 @@
           <input ng-model="search.q" type="text" placeholder="Search" />
           <input type="submit"/>
         </form>
+        {{search.q}}
       </section>
 
       <section>
+        {{search.results}}
          <div ng-repeat="g in search.results" >
            <img ng-src={{g.url}} alt="Image of {{g.url}}"/>
            <input ng-model="g.comment" type="text" placeholder="Comment" />
